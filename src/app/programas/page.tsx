@@ -60,13 +60,13 @@ export default function Programas() {
       </section>
 
       {/* Detailed Programs Section */}
-      <section className="md:pt-32 pt-16 pb-16 bg-almost-black">
+      <section className="md:pt-32 pt-16 pb-16 md:bg-almost-black bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:text-center text-left">
-            <h2 className="heading-section-large text-primary">
+            <h2 className="heading-section-large md:text-primary text-almost-black">
               {programasData.detailedPrograms.title}
             </h2>
-            <p className="text-lg text-primary max-w-3xl mx-auto">
+            <p className="text-lg md:text-primary text-almost-black max-w-3xl mx-auto">
               {programasData.detailedPrograms.description}
             </p>
           </div>
@@ -74,7 +74,7 @@ export default function Programas() {
       </section>
 
       {/* Embarazo y Postparto Detailed */}
-      <section className="md:pb-32 pb-16 bg-almost-black">
+      <section className="md:pb-32 pb-16 bg-almost-black md:pt-0 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
             <div>
