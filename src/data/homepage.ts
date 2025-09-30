@@ -6,8 +6,8 @@ export const heroData = {
   description:
     "Desde 2015 transformamos la forma de hacer fisioterapia en México.",
   ctaButtons: [
-    { href: "/contacto", variant: "fill-white", text: "Agenda tu cita" },
-    { href: "/nosotros", variant: "outline-white", text: "Conoce más" },
+    { href: contactData.contact.whatsapp.href, variant: "fill-white", text: "Agenda tu cita" },
+    { href: "/#about", variant: "outline-white", text: "Conoce más" },
   ],
 };
 

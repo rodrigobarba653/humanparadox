@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: "Human Paradox - Fisioterapia basada en rendimiento",
   description:
     "Clínica de fisioterapia especializada en rehabilitación y rendimiento. Desde 2015 transformamos la forma de hacer fisioterapia en México.",
+  icons: {
+    icon: "/images/icon.ico",
+  },
 };
 
 export default function RootLayout({

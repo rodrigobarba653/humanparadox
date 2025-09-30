@@ -32,9 +32,7 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "top-0 bg-[#282828] backdrop-blur-sm"
-          : "top-4 bg-transparent"
+        isScrolled ? "top-0 bg-[#282828]" : "top-4 bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
@@ -113,12 +111,12 @@ export default function Navigation() {
           <div className="md:hidden fixed inset-0 z-50">
             {/* Backdrop */}
             <div
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+              className="fixed inset-0 bg-black/80"
               onClick={() => setIsMenuOpen(false)}
             />
 
             {/* Offcanvas Panel */}
-            <div className="fixed right-0 top-0 h-full w-full max-w-sm bg-almost-black shadow-2xl transform transition-transform duration-300 ease-in-out">
+            <div className="fixed right-0 top-0 h-full w-full max-w-sm bg-[#282828] shadow-2xl transform transition-transform duration-300 ease-in-out z-50">
               <div className="flex flex-col h-full">
                 {/* Header */}
                 <div className="flex items-center justify-between p-6 border-b border-gray-600">

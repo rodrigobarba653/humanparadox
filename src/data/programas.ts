@@ -1,3 +1,5 @@
+import { contactData } from "./contact";
+
 export const programasData = {
   hero: {
     title: "Programas Especiales",
@@ -19,7 +21,7 @@ export const programasData = {
         "Rehabilitación del piso pélvico",
       ],
       icon: "mdi:human-pregnant",
-      link: { href: "/contacto", text: "Más información" },
+      link: { href: contactData.contact.whatsapp.href, text: "Más información" },
     },
     {
       title: "Adulto Mayor",
@@ -32,7 +34,7 @@ export const programasData = {
         "Rehabilitación neurológica",
       ],
       icon: "mdi:elderly",
-      link: { href: "/contacto", text: "Más información" },
+      link: { href: contactData.contact.whatsapp.href, text: "Más información" },
     },
     {
       title: "Deportistas de Alto Rendimiento",
@@ -45,7 +47,7 @@ export const programasData = {
         "Periodización del entrenamiento",
       ],
       icon: "ic:round-sports-gymnastics",
-      link: { href: "/contacto", text: "Más información" },
+      link: { href: contactData.contact.whatsapp.href, text: "Más información" },
     },
   ],
   detailedPrograms: {

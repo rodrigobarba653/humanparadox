@@ -15,7 +15,7 @@ export const footerData = {
       { href: "/rehabilitacion", text: "Rehabilitación" },
       { href: "/programas", text: "Programas" },
       { href: "/empresas", text: "Empresas" },
-      { href: "/contacto", text: "Contacto" },
+      { href: contactData.contact.whatsapp.href, text: "Contacto" },
     ],
   },
   copyright: {

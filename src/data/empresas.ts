@@ -1,3 +1,5 @@
+import { contactData } from "./contact";
+
 export const empresasData = {
   hero: {
     title: "Empresas y Convenios",
@@ -17,7 +19,7 @@ export const empresasData = {
       src: "/images/hero-14.jpg",
       alt: "Servicios corporativos de fisioterapia",
     },
-    link: { href: "/contacto", text: "Solicitar información" },
+    link: { href: contactData.contact.whatsapp.href, text: "Solicitar información" },
   },
   services: {
     title: "Nuestros Servicios Corporativos",
