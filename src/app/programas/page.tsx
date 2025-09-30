@@ -60,13 +60,13 @@ export default function Programas() {
       </section>
 
       {/* Detailed Programs Section */}
-      <section className="md:pt-32 pt-16 pb-16 md:bg-almost-black bg-primary">
+      <section className="md:pt-32 pt-16 pb-16 md:bg-almost-black! bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:text-center text-left">
-            <h2 className="heading-section-large md:text-primary text-almost-black">
+            <h2 className="heading-section-large text-almost-black md:text-primary!">
               {programasData.detailedPrograms.title}
             </h2>
-            <p className="text-lg md:text-primary text-almost-black max-w-3xl mx-auto">
+            <p className="text-lg text-almost-black md:text-primary! max-w-3xl mx-auto">
               {programasData.detailedPrograms.description}
             </p>
           </div>
