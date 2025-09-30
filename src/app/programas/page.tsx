@@ -10,7 +10,7 @@ export default function Programas() {
 
       {/* Hero Section */}
       <section className="relative pt-4">
-        <div className="px-4 sm:px-6 lg:px-8 md:py-40 py-32  bg-almost-black md:rounded-[4rem] rounded-[3rem] overflow-hidden max-w-[95vw] mx-auto relative">
+        <div className="px-4 sm:px-6 lg:px-8 md:py-40 py-20  bg-almost-black md:rounded-[4rem] rounded-[3rem] overflow-hidden max-w-[95vw] mx-auto relative">
           {/* Background Image */}
           <img
             src={programasData.hero.image.src}

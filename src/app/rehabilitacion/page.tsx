@@ -9,7 +9,7 @@ export default function Rehabilitacion() {
 
       {/* Hero Section */}
       <section className="relative pt-4">
-        <div className="px-4 sm:px-6 lg:px-8 md:py-40 py-32  bg-almost-black md:rounded-[4rem] rounded-[3rem] overflow-hidden max-w-[95vw] mx-auto relative">
+        <div className="px-4 sm:px-6 lg:px-8 md:py-40 py-20  bg-almost-black md:rounded-[4rem] rounded-[3rem] overflow-hidden max-w-[95vw] mx-auto relative">
           {/* Background Image */}
           <img
             src={rehabilitacionData.hero.image.src}
@@ -76,7 +76,7 @@ export default function Rehabilitacion() {
       <section className="md:py-32 py-16 bg-almost-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pl-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
-            <div className="md:h-[600px] h-[320px] overflow-hidden">
+            <div className="md:h-[600px] h-[320px] overflow-hidden md:order-1 order-2">
               <img
                 src={rehabilitacionData.howWeDoIt.image.src}
                 alt={rehabilitacionData.howWeDoIt.image.alt}
