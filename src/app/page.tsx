@@ -1,103 +1,246 @@
-import Image from "next/image";
+import { Navigation, Footer } from "@/components/layout";
+import { CTAButton, LinkButton } from "@/components/UI";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
+import {
+  heroData,
+  aboutUsData,
+  empathyData,
+  servicesData,
+  specializationsData,
+  breakImageData,
+} from "@/data";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen mt-4">
+      <Navigation />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <section className="relative pt-16 lg:min-h-screen md:h-[80vh] h-[90vh] flex md:items-center items-end overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 md:rounded-[4rem] rounded-[3rem] overflow-hidden max-w-[95vw] mx-auto">
+          {/* Desktop Image */}
+          <img
+            src="/images/hero-11.jpg"
+            alt="Fisioterapia y rehabilitación"
+            className="hidden md:block w-full h-full object-cover"
+          />
+          {/* Mobile Image */}
+          <img
+            src="/images/hero-11-mobile.jpg"
+            alt="Fisioterapia y rehabilitación"
+            className="md:hidden w-full h-full object-cover"
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#282828]/90 to-[#282828]/40 w-full h-full"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl px-4 sm:px-8 lg:px-40 md:py-20 py-8">
+          <div className="text-left max-w-3xl">
+            <h1
+              className="heading-hero-large text-primary"
+              style={{
+                fontFamily:
+                  "var(--font-open-sans), Arial, Helvetica, sans-serif",
+              }}
+            >
+              {heroData.heading}
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl text-primary mb-8 max-w-xl">
+              {heroData.description}
+            </p>
+            <div className="flex md:flex-row flex-col gap-4">
+              {heroData.ctaButtons.map((button, index) => (
+                <CTAButton
+                  className="lg:w-fit w-full"
+                  key={index}
+                  href={button.href}
+                  variant={button.variant as any}
+                >
+                  {button.text}
+                </CTAButton>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About us Section */}
+      <section className="md:py-32 py-16 ">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="heading-section-large text-black">
+            {aboutUsData.heading}
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            {aboutUsData.description}
+          </p>
+        </div>
+      </section>
+
+      {/* Empathy Section */}
+      <section className="md:py-32 py-16 bg-almost-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+            <div>
+              <p className="text-lg text-primary mb-4 uppercase tracking-wider">
+                {empathyData.subheading}
+              </p>
+              <h2 className="heading-section-large text-primary lg:pr-4">
+                {empathyData.heading}
+              </h2>
+              <p className="text-lg text-primary mb-8">
+                {empathyData.description}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                {empathyData.ctaButtons.map((button, index) => (
+                  <CTAButton
+                    key={index}
+                    href={button.href}
+                    variant={button.variant as any}
+                    target={button.target}
+                    rel={button.rel}
+                  >
+                    <Icon icon={button.icon} className="w-5 h-5" />
+                    {button.text}
+                  </CTAButton>
+                ))}
+              </div>
+            </div>
+            <div className="bg-gray-100 md:h-[600px] h-[400px] overflow-hidden rounded-[2rem]">
+              <img
+                src={empathyData.image.src}
+                alt={empathyData.image.alt}
+                className="w-full h-full object-cover object-left"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="md:pt-16 pt-8 md:pb-32 pb-20 bg-almost-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-lg text-primary mb-4 uppercase tracking-wider">
+              {servicesData.subheading}
+            </p>
+            <h2 className="heading-section-large text-primary mb-4">
+              {servicesData.heading}
+            </h2>
+            <p className="text-lg text-primary max-w-2xl mx-auto">
+              {servicesData.description}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {servicesData.cards.map((card, index) => (
+              <div
+                key={index}
+                className="relative lg:h-[500px] h-[300px] rounded-2xl border-2 border-almost-black overflow-hidden block group cursor-pointer transition-transform duration-300 md:hover:scale-[1.02]"
+              >
+                {/* Background Image */}
+                <img
+                  src={card.image.src}
+                  alt={card.image.alt}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent"></div>
+                {/* Content */}
+                <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                  {/* Text content that moves up on hover */}
+                  <div className="transform translate-y-0 md:group-hover:-translate-y-4 transition-transform duration-300 ease-out">
+                    <h3 className="heading-card-large text-white">
+                      {card.title}
+                    </h3>
+                    <p className="text-white lg:mb-0 mb-2 opacity-90">
+                      {card.description}
+                    </p>
+                  </div>
+                  {/* LinkButton that slides up on hover */}
+                  <div className="transform md:translate-y-full md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-300 ease-out">
+                    <LinkButton
+                      href={card.link.href}
+                      className="text-white border-white hover:bg-white hover:text-black transition-colors duration-300"
+                    >
+                      {card.link.text}
+                    </LinkButton>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Specializations Section */}
+      <section className="md:py-32 py-16 ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="md:text-right text-left mb-16">
+            <p className="text-lg text-almost-black mb-4 uppercase tracking-wider">
+              {specializationsData.subheading}
+            </p>
+            <h2 className="heading-section-large text-black mb-4">
+              {specializationsData.heading}
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl ml-auto">
+              {specializationsData.description}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {specializationsData.specialties.map((specialty, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-2xl border-2 border-almost-black"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-almost-black rounded-full flex items-center justify-center">
+                      <Icon
+                        icon={specialty.icon}
+                        className="text-4xl text-primary"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="heading-small text-black mb-4">
+                      {specialty.title}
+                    </h3>
+                    <ul className="space-y-2">
+                      {specialty.conditions.map((condition, idx) => (
+                        <li key={idx} className="text-gray-600 text-sm">
+                          • {condition}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Break Image Section */}
+      <section className="py-0 md:pb-32 pb-20 max-w-7xl mx-auto">
+        <div className="relative h-[500px] overflow-hidden rounded-[4rem]">
+          <img
+            src={breakImageData.src}
+            alt={breakImageData.alt}
+            className="w-full h-full object-cover"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <div className="absolute inset-0 bg-black/20 flex items-end justify-end p-8">
+            <h2 className="heading-hero text-primary text-right max-w-4xl w-full">
+              Ciencia, movimiento y humanidad en cada paso.
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }

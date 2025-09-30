@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f5dc;
+  --foreground: #000000;
+  --primary: #f5f5dc;
+  --almost-black: #282828;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-almost-black: var(--almost-black);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-open-sans: var(--font-open-sans);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+/* Custom utility classes */
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.text-almost-black {
+  color: var(--almost-black);
+}
+
+.bg-almost-black {
+  background-color: var(--almost-black);
+}
+
+.border-almost-black {
+  border-color: var(--almost-black);
+}
+
+/* Heading System */
+/* Hero headings - Main page titles */
+.heading-hero {
+  @apply text-4xl md:text-6xl font-bold mb-6;
+}
+
+.heading-hero-large {
+  @apply text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 tracking-[-3px];
+}
+
+/* Main section headings - Page section titles */
+.heading-section {
+  @apply text-3xl md:text-4xl font-bold mb-6;
+}
+
+.heading-section-large {
+  @apply text-4xl sm:text-4xl md:text-4xl font-bold mb-4 tracking-[-1px];
+}
+
+.heading-section-small {
+  @apply text-2xl font-bold mb-4;
+}
+
+/* Subsection headings - Content area titles */
+.heading-subsection {
+  @apply text-xl font-semibold mb-4;
+}
+
+.heading-subsection-large {
+  @apply text-2xl font-semibold mb-4;
+}
+
+.heading-subsection-xl {
+  @apply text-3xl font-bold mb-6;
+}
+
+/* Card and item headings */
+.heading-card {
+  @apply text-xl font-semibold mb-2;
+}
+
+.heading-card-large {
+  @apply text-2xl font-semibold mb-2;
+}
+
+.heading-card-small {
+  @apply text-lg font-semibold mb-2;
+}
+
+/* Small headings - Lists, details */
+.heading-small {
+  @apply text-lg font-semibold mb-2;
+}
+
+.heading-tiny {
+  @apply font-medium;
 }
