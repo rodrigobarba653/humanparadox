@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Clínica de fisioterapia especializada en rehabilitación y rendimiento. Desde 2015 transformamos la forma de hacer fisioterapia en México.",
   icons: {
-    icon: "/images/icon.ico",
+    icon: "/icon.ico",
   },
 };
 

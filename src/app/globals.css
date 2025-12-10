@@ -17,6 +17,10 @@
   --font-open-sans: var(--font-open-sans);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -90,10 +94,6 @@ body {
   @apply text-xl font-semibold mb-4;
 }
 
-.heading-subsection-large {
-  @apply text-2xl font-semibold mb-4;
-}
-
 .heading-subsection-xl {
   @apply text-3xl font-bold mb-6;
 }
@@ -105,10 +105,6 @@ body {
 
 .heading-card-large {
   @apply text-2xl font-semibold mb-2;
-}
-
-.heading-card-small {
-  @apply text-lg font-semibold mb-2;
 }
 
 /* Small headings - Lists, details */

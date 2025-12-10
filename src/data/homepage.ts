@@ -4,17 +4,20 @@ export const heroData = {
   subheading: "Transformando vidas desde 2015",
   heading: "Fisioterapia basada en rendimiento.",
   description:
-    "Desde 2015 transformamos la forma de hacer fisioterapia en México.",
+    "Desde 2015 transformando la forma de hacer fisioterapia en México.",
   ctaButtons: [
-    { href: contactData.contact.whatsapp.href, variant: "fill-white", text: "Agenda tu cita" },
-    { href: "/#about", variant: "outline-white", text: "Conoce más" },
+    {
+      href: contactData.contact.whatsapp.href,
+      variant: "fill-white",
+      text: "Agenda tu cita",
+    },
   ],
 };
 
 export const aboutUsData = {
   heading: "Quiénes Somos",
   description:
-    "Desde 2015 transformamos la forma de hacer fisioterapia en México. Combinamos conocimiento especializado, ciencia del ejercicio y programas personalizados para que tu rehabilitación no sea solo un regreso, sino una evolución. Una clínica de alta especialidad con programas personalizados para cada necesidad",
+    "Desde 2015 transformando la forma de hacer fisioterapia en México. Combinamos conocimiento especializado, ciencia del ejercicio y programas personalizados para que tu rehabilitación no sea solo un regreso, sino una evolución. Una clínica de alta especialidad con programas personalizados para cada necesidad.",
 };
 
 export const empathyData = {

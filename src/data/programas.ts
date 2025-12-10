@@ -21,7 +21,10 @@ export const programasData = {
         "Rehabilitación del piso pélvico",
       ],
       icon: "mdi:human-pregnant",
-      link: { href: contactData.contact.whatsapp.href, text: "Más información" },
+      link: {
+        href: contactData.contact.whatsapp.href,
+        text: "Más información",
+      },
     },
     {
       title: "Adulto Mayor",
@@ -34,7 +37,10 @@ export const programasData = {
         "Rehabilitación neurológica",
       ],
       icon: "mdi:elderly",
-      link: { href: contactData.contact.whatsapp.href, text: "Más información" },
+      link: {
+        href: contactData.contact.whatsapp.href,
+        text: "Más información",
+      },
     },
     {
       title: "Deportistas de Alto Rendimiento",
@@ -47,13 +53,16 @@ export const programasData = {
         "Periodización del entrenamiento",
       ],
       icon: "ic:round-sports-gymnastics",
-      link: { href: contactData.contact.whatsapp.href, text: "Más información" },
+      link: {
+        href: contactData.contact.whatsapp.href,
+        text: "Más información",
+      },
     },
   ],
   detailedPrograms: {
     title: "Programas Detallados",
     description:
-      "Cada programa está diseñado específicamente para las necesidades únicas de cada población",
+      "Cada programa está diseñado específicamente para las necesidades únicas de cada población.",
     programs: [
       {
         title: "Programa de Embarazo y Postparto",
@@ -91,7 +100,7 @@ export const programasData = {
         imagePosition: "left",
         sections: [
           {
-            title: "Prevención de Caídas",
+            title: "Prevención de Caídas y Vida Independiente",
             items: [
               "Evaluación del riesgo de caídas",
               "Ejercicios de equilibrio y coordinación",
@@ -105,7 +114,6 @@ export const programasData = {
               "Osteoporosis y sarcopenia",
               "Artritis y dolor articular",
               "Enfermedades neurológicas",
-              "Mantenimiento de la independencia",
             ],
           },
         ],
@@ -120,10 +128,10 @@ export const programasData = {
           {
             title: "Optimización del Rendimiento",
             items: [
+              "Periodización del entrenamiento",
               "Análisis biomecánico del gesto deportivo",
               "Corrección de patrones de movimiento",
               "Fortalecimiento específico del deporte",
-              "Mejora de la eficiencia energética",
             ],
           },
           {
@@ -132,7 +140,7 @@ export const programasData = {
               "Programas de prevención de lesiones",
               "Recuperación acelerada post-entrenamiento",
               "Manejo de sobrecarga y fatiga",
-              "Periodización del entrenamiento",
+              "Mejora de la eficiencia energética",
             ],
           },
         ],

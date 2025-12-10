@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { empresasData } from "@/data";
+import { ScrollReveal } from "@/components/UI";
 
 export default function Empresas() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
@@ -25,12 +26,16 @@ export default function Empresas() {
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-almost-black/90 to-almost-black/40 w-full h-full"></div>
           <div className="relative z-10 text-center">
-            <h1 className="heading-hero text-primary">
-              {empresasData.hero.title}
-            </h1>
-            <p className="text-xl md:text-2xl text-primary mb-4">
-              {empresasData.hero.subtitle}
-            </p>
+            <ScrollReveal delay={300}>
+              <h1 className="heading-hero text-primary">
+                {empresasData.hero.title}
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal delay={600}>
+              <p className="text-xl md:text-2xl text-primary mb-4">
+                {empresasData.hero.subtitle}
+              </p>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -40,29 +45,39 @@ export default function Empresas() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="heading-section text-almost-black">
-                {empresasData.mainServices.title}
-              </h2>
-              <p className="text-lg text-almost-black mb-6">
-                {empresasData.mainServices.description}
-              </p>
-              <p className="text-lg text-almost-black mb-8">
-                {empresasData.mainServices.additionalDescription}
-              </p>
-              <Link
-                href={empresasData.mainServices.link.href}
-                className="bg-almost-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors duration-200 font-medium"
-              >
-                {empresasData.mainServices.link.text}
-              </Link>
+              <ScrollReveal delay={100}>
+                <h2 className="heading-section text-almost-black">
+                  {empresasData.mainServices.title}
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={200}>
+                <p className="text-lg text-almost-black mb-6">
+                  {empresasData.mainServices.description}
+                </p>
+              </ScrollReveal>
+              <ScrollReveal delay={300}>
+                <p className="text-lg text-almost-black mb-8">
+                  {empresasData.mainServices.additionalDescription}
+                </p>
+              </ScrollReveal>
+              <ScrollReveal delay={400}>
+                <Link
+                  href={empresasData.mainServices.link.href}
+                  className="bg-almost-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors duration-200 font-medium"
+                >
+                  {empresasData.mainServices.link.text}
+                </Link>
+              </ScrollReveal>
             </div>
-            <div className="md:h-[600px] h-[320px] overflow-hidden rounded-4xl">
-              <img
-                src={empresasData.mainServices.image.src}
-                alt={empresasData.mainServices.image.alt}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <ScrollReveal delay={500}>
+              <div className="md:h-[600px] h-[320px] overflow-hidden rounded-4xl">
+                <img
+                  src={empresasData.mainServices.image.src}
+                  alt={empresasData.mainServices.image.alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -71,40 +86,43 @@ export default function Empresas() {
       <section className="md:pb-32 pb-16 mt-8 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="heading-section text-almost-black mb-4">
-              {empresasData.services.title}
-            </h2>
-            <p className="text-lg text-almost-black max-w-3xl mx-auto">
-              {empresasData.services.description}
-            </p>
+            <ScrollReveal delay={100}>
+              <h2 className="heading-section text-almost-black mb-4">
+                {empresasData.services.title}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <p className="text-lg text-almost-black max-w-3xl mx-auto">
+                {empresasData.services.description}
+              </p>
+            </ScrollReveal>
           </div>
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {empresasData.services.items.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-2xl border-2 border-almost-black"
-              >
-                <div className="w-16 h-16 bg-almost-black rounded-full flex items-center justify-center mb-6">
-                  <Icon icon={service.icon} className="w-8 h-8 text-white" />
+              <ScrollReveal key={index} delay={300 + index * 100}>
+                <div className="bg-white p-8 rounded-2xl border-2 border-almost-black">
+                  <div className="w-16 h-16 bg-almost-black rounded-full flex items-center justify-center mb-6">
+                    <Icon icon={service.icon} className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="heading-subsection text-almost-black">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="space-y-2">
+                    <h4 className="heading-tiny text-almost-black">
+                      Beneficios:
+                    </h4>
+                    <ul className="space-y-1">
+                      {service.benefits.map((benefit, idx) => (
+                        <li key={idx} className="text-gray-600 text-sm">
+                          • {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="heading-subsection text-almost-black">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="space-y-2">
-                  <h4 className="heading-tiny text-almost-black">
-                    Beneficios:
-                  </h4>
-                  <ul className="space-y-1">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="text-gray-600 text-sm">
-                        • {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -159,12 +177,16 @@ export default function Empresas() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="heading-section text-almost-black mb-4">
-                {empresasData.benefits.title}
-              </h2>
-              <p className="text-lg text-almost-black mb-8">
-                {empresasData.benefits.description}
-              </p>
+              <ScrollReveal delay={100}>
+                <h2 className="heading-section text-almost-black mb-4">
+                  {empresasData.benefits.title}
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={200}>
+                <p className="text-lg text-almost-black mb-8">
+                  {empresasData.benefits.description}
+                </p>
+              </ScrollReveal>
 
               {/* Accordion */}
               <div className="-space-y-0.5">
@@ -214,13 +236,15 @@ export default function Empresas() {
             </div>
 
             {/* Image */}
-            <div className="md:h-full h-[320px] overflow-hidden rounded-4xl">
-              <img
-                src={empresasData.benefits.image.src}
-                alt={empresasData.benefits.image.alt}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <ScrollReveal delay={300}>
+              <div className="md:h-full h-[320px] overflow-hidden rounded-4xl">
+                <img
+                  src={empresasData.benefits.image.src}
+                  alt={empresasData.benefits.image.alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -229,25 +253,31 @@ export default function Empresas() {
       <section className="py-20 bg-almost-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="heading-section text-primary mb-4">
-              {empresasData.process.title}
-            </h2>
-            <p className="text-lg text-primary max-w-3xl mx-auto">
-              {empresasData.process.description}
-            </p>
+            <ScrollReveal delay={100}>
+              <h2 className="heading-section text-primary mb-4">
+                {empresasData.process.title}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <p className="text-lg text-primary max-w-3xl mx-auto">
+                {empresasData.process.description}
+              </p>
+            </ScrollReveal>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {empresasData.process.steps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary text-almost-black rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
-                  {step.step}
+              <ScrollReveal key={index} delay={300 + index * 100}>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary text-almost-black rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
+                    {step.step}
+                  </div>
+                  <h3 className="heading-subsection text-primary">
+                    {step.title}
+                  </h3>
+                  <p className="text-primary">{step.description}</p>
                 </div>
-                <h3 className="heading-subsection text-primary">
-                  {step.title}
-                </h3>
-                <p className="text-primary">{step.description}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

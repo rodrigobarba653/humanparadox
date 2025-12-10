@@ -60,7 +60,7 @@ export const rehabilitacionData = {
         icon: "grommet-icons:yoga",
       },
       {
-        title: "Liberación miofascial",
+        title: "Terapia manual",
         description: "Que mejora la movilidad y disminuye tensiones.",
         icon: "material-symbols:massage-outline",
       },

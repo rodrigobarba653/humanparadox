@@ -171,9 +171,9 @@ export default function Footer() {
           <p className="mt-2">
             <Link
               href="/privacidad"
-              className="hover:text-white transition-colors"
+              className="hover:text-white transition-colors underline"
             >
-              Consulta aquí nuestro aviso de privacidad
+              Aviso de Privacidad
             </Link>
           </p>
         </div>
