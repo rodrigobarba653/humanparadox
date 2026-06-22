@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { contactData } from "@/data";
+import { CTAButton } from "@/components/UI";
 
 export default function NotFound() {
   return (
@@ -95,23 +96,22 @@ export default function NotFound() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <CTAButton
               href={contactData.contact.whatsapp.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-almost-black font-semibold rounded-lg hover:bg-white transition-colors duration-200"
             >
-              <span className="mr-2">💬</span>
+              <span>💬</span>
               WhatsApp
-            </a>
-            
-            <a
+            </CTAButton>
+
+            <CTAButton
               href={`tel:${contactData.contact.phone}`}
-              className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-almost-black transition-colors duration-200"
+              variant="outline-white"
             >
-              <span className="mr-2">📞</span>
+              <span>📞</span>
               Llamar
-            </a>
+            </CTAButton>
           </div>
         </div>
 

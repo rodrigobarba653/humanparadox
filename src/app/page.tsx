@@ -33,7 +33,7 @@ export default function Home() {
             className="md:hidden w-full h-full object-cover"
           />
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#282828]/90 to-[#282828]/40 w-full h-full"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#191819]/90 to-[#191819]/40 w-full h-full"></div>
         </div>
 
         {/* Content */}
@@ -105,9 +105,14 @@ export default function Home() {
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={300}>
-                <p className="text-lg text-primary mb-8">
-                  {empathyData.description}
-                </p>
+                <ul className="space-y-4 mb-8 list-disc pl-5">
+                  {empathyData.phases.map((phase, index) => (
+                    <li key={index} className="text-lg text-primary">
+                      <span className="font-semibold">{phase.title}:</span>{" "}
+                      {phase.description}
+                    </li>
+                  ))}
+                </ul>
               </ScrollReveal>
               <ScrollReveal delay={400}>
                 <div className="flex flex-col sm:flex-row gap-4">

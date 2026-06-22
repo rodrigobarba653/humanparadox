@@ -4,11 +4,11 @@ export const heroData = {
   subheading: "Transformando vidas desde 2015",
   heading: "Fisioterapia basada en rendimiento.",
   description:
-    "Desde 2015 transformando la forma de hacer fisioterapia en México.",
+    "Desde 2015, transformamos la rehabilitación en evolución. Bienvenido  a la metodología Paradox: Rehabilitación Basada en Performance.",
   ctaButtons: [
     {
       href: contactData.contact.whatsapp.href,
-      variant: "fill-white",
+      variant: "fill-primary",
       text: "Agenda tu cita",
     },
   ],
@@ -17,18 +17,33 @@ export const heroData = {
 export const aboutUsData = {
   heading: "Quiénes Somos",
   description:
-    "Desde 2015 transformando la forma de hacer fisioterapia en México. Combinamos conocimiento especializado, ciencia del ejercicio y programas personalizados para que tu rehabilitación no sea solo un regreso, sino una evolución. Una clínica de alta especialidad con programas personalizados para cada necesidad.",
+    "En Human Paradox creemos que el cuerpo no es una máquina que se repara, sino un sistema vivo que se entrena. Combinamos ciencia del ejercicio, tecnología clínica y un enfoque especializado para que no solo regreses a tu vida convencional, sino que lo hagas con un rendimiento superior al que tenías antes de lesionarte.",
 };
 
 export const empathyData = {
   subheading: "Nuestro enfoque",
-  heading: "Empatía y conexión con el paciente",
-  description:
-    "En Human Paradox no tratamos lesiones de manera genérica: trabajamos contigo. Escuchamos tu historia, entendemos tus metas y diseñamos un programa específico que responde a tu cuerpo y a tu vida real.",
+  heading: "Consiste en 3 Fases. Un sistema diseñado para resultados reales:",
+  phases: [
+    {
+      title: "Fase 1 (Origen)",
+      description:
+        "Diagnóstico biomecánico profundo para encontrar la causa, no el síntoma.",
+    },
+    {
+      title: "Fase 2 (Resolución)",
+      description:
+        "Eliminación del dolor mediante terapia manual y diversas técnicas específicas según tu caso.",
+    },
+    {
+      title: "Fase 3 (Evolución)",
+      description:
+        "Plan de performance personalizado para alcanzar tus nuevos objetivos físicos.",
+    },
+  ],
   ctaButtons: [
     {
       href: `tel:${contactData.contact.phone}`,
-      variant: "fill-white",
+      variant: "fill-primary",
       text: "Agendar",
       icon: "mdi:phone",
     },
@@ -49,47 +64,48 @@ export const empathyData = {
 
 export const servicesData = {
   subheading: "Nuestros servicios",
-  heading: "Lo Que Ofrecemos",
+  heading: "Soluciones para cada perfil",
   description:
-    "Una clínica de alta especialidad con programas personalizados para cada necesidad",
+    "No importa tu punto de partida, tenemos un plan de evolución para ti.",
   cards: [
     {
-      title: "Rehabilitación y desempeño",
+      title: "HPx Performance",
       description:
-        "Reduce el dolor, recupera tu seguridad y optimiza tu movimiento con programas personalizados basados en ciencia y ejercicio.",
+        "Optimización de gesto deportivo, rendimiento y prevención de lesiones.",
       image: {
-        src: "/images/hero-2.jpg",
-        alt: "Rehabilitación y desempeño",
+        src: "/images/hero-1.jpg",
+        alt: "HPx Performance",
       },
       link: { href: "/rehabilitacion", text: "Ver más →" },
     },
     {
-      title: "Programas especiales",
+      title: "HPx Life Stages",
       description:
-        "Planes diseñados para etapas y poblaciones específicas: embarazo y postparto, adulto mayor y deportistas de alto rendimiento.",
+        "Embarazo, post-parto, piso pélvico y geriatría activa (Parkinson, movilidad).",
       image: {
         src: "/images/hero-5.jpg",
+        alt: "HPx Life Stages",
       },
       link: { href: "/programas", text: "Ver más →" },
     },
     {
-      title: "Empresas y convenios",
+      title: "HPx Recovery",
       description:
-        "Soluciones de fisioterapia y bienestar para organizaciones, estudios o equipos deportivos, enfocadas en prevenir lesiones y mejorar el desempeño.",
+        "Rehabilitación ortopédica (post-quirúrgico, fracturas) y neurológica compleja.",
       image: {
-        src: "/images/hero-13.jpg",
-        alt: "Empresas y convenios",
+        src: "/images/hero-2.jpg",
+        alt: "HPx Recovery",
       },
-      link: { href: "/empresas", text: "Ver más →" },
+      link: { href: "/rehabilitacion", text: "Ver más →" },
     },
   ],
 };
 
 export const specializationsData = {
   subheading: "Nuestro equipo",
-  heading: "Una clínica de alta especialidad",
+  heading: "Expertos en tu evolución",
   description:
-    "Nuestros terapeutas cuentan con especialidades que nos permiten acompañar cada proceso de rehabilitación, sin importar lo simple o complejo que sea.",
+    "Más que fisioterapeutas, somos arquitectos del movimiento. Un equipo multidisciplinario con especialidades clínicas y visión de performance, listos para guiarte en cada fase de tu proceso.",
   specialties: [
     {
       title: "Neurológica",

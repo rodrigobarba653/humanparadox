@@ -1,11 +1,10 @@
 "use client";
 
 import { Navigation, Footer } from "@/components/layout";
-import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { empresasData } from "@/data";
-import { ScrollReveal } from "@/components/UI";
+import { ScrollReveal, CTAButton } from "@/components/UI";
 
 export default function Empresas() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
@@ -61,12 +60,9 @@ export default function Empresas() {
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={400}>
-                <Link
-                  href={empresasData.mainServices.link.href}
-                  className="bg-almost-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors duration-200 font-medium"
-                >
+                <CTAButton href={empresasData.mainServices.link.href}>
                   {empresasData.mainServices.link.text}
-                </Link>
+                </CTAButton>
               </ScrollReveal>
             </div>
             <ScrollReveal delay={500}>

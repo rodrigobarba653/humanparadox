@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:pb-20 pb-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Map and Contact Info */}
-          <div className="rounded-xl bg-[#f8f6e3] p-6 h-fit">
+          <div className="rounded-xl bg-primary p-6 h-fit">
             <h3 className="text-2xl font-semibold text-black mb-6">
               Ubicación
             </h3>
@@ -82,7 +82,7 @@ export default function Footer() {
               diseñamos un programa específico.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <CTAButton href="tel:+525554531398" variant="fill-white">
+              <CTAButton href="tel:+525554531398">
                 <svg
                   className="w-5 h-5"
                   fill="none"
