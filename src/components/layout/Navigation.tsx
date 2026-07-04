@@ -47,12 +47,12 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 text-lg">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`transition-colors duration-200 font-medium ${
+                className={`nav-link transition-colors duration-200 font-medium ${
                   isScrolled
                     ? "text-white hover:text-gray-300"
                     : "text-white hover:text-gray-300"
@@ -65,7 +65,7 @@ export default function Navigation() {
               href={contactData.contact.whatsapp.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 text-xs"
+              className="px-4 py-2 text-sm"
             >
               Reservar cita
             </CTAButton>
@@ -153,7 +153,7 @@ export default function Navigation() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block text-2xl font-normal text-white hover:text-gray-300 transition-colors duration-200"
+                        className="nav-link block text-2xl font-normal text-white hover:text-gray-300 transition-colors duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.label}

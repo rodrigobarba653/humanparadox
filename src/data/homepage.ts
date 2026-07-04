@@ -15,7 +15,7 @@ export const heroData = {
 };
 
 export const aboutUsData = {
-  heading: "Quiénes Somos",
+  heading: "Quiénes somos",
   description:
     "En Human Paradox creemos que el cuerpo no es una máquina que se repara, sino un sistema vivo que se entrena. Combinamos ciencia del ejercicio, tecnología clínica y un enfoque especializado para que no solo regreses a tu vida convencional, sino que lo hagas con un rendimiento superior al que tenías antes de lesionarte.",
 };
@@ -57,7 +57,7 @@ export const empathyData = {
     },
   ],
   image: {
-    src: "/images/hero-10.jpg",
+    src: "/images/enfoque.jpg",
     alt: "Fisioterapeuta trabajando con paciente",
   },
 };
@@ -73,7 +73,7 @@ export const servicesData = {
       description:
         "Optimización de gesto deportivo, rendimiento y prevención de lesiones.",
       image: {
-        src: "/images/hero-1.jpg",
+        src: "/images/performance.jpg",
         alt: "HPx Performance",
       },
       link: { href: "/rehabilitacion", text: "Ver más →" },
@@ -93,7 +93,7 @@ export const servicesData = {
       description:
         "Rehabilitación ortopédica (post-quirúrgico, fracturas) y neurológica compleja.",
       image: {
-        src: "/images/hero-2.jpg",
+        src: "/images/recovery.jpg",
         alt: "HPx Recovery",
       },
       link: { href: "/rehabilitacion", text: "Ver más →" },

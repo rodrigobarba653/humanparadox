@@ -22,13 +22,13 @@ export default function Home() {
         <div className="absolute inset-0 z-0 md:rounded-[4rem] rounded-[3rem] overflow-hidden max-w-[95vw] mx-auto">
           {/* Desktop Image */}
           <img
-            src="/images/hero-11.jpg"
+            src="/images/hero-final.jpg"
             alt="Fisioterapia y rehabilitación"
             className="hidden md:block w-full h-full object-cover"
           />
           {/* Mobile Image */}
           <img
-            src="/images/hero-11-mobile.jpg"
+            src="/images/hero-final-mobile.jpg"
             alt="Fisioterapia y rehabilitación"
             className="md:hidden w-full h-full object-cover"
           />
@@ -40,13 +40,7 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl px-4 sm:px-8 lg:px-40 md:py-20 py-8">
           <div className="text-left max-w-3xl">
             <ScrollReveal delay={300}>
-              <h1
-                className="heading-hero-large text-primary"
-                style={{
-                  fontFamily:
-                    "var(--font-open-sans), Arial, Helvetica, sans-serif",
-                }}
-              >
+              <h1 className="heading-hero-large text-primary">
                 {heroData.heading}
               </h1>
             </ScrollReveal>
@@ -95,7 +89,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
             <div>
               <ScrollReveal delay={100}>
-                <p className="text-lg text-primary mb-4 uppercase tracking-wider">
+                <p className="subheading text-primary">
                   {empathyData.subheading}
                 </p>
               </ScrollReveal>
@@ -149,7 +143,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <ScrollReveal delay={100}>
-              <p className="text-lg text-primary mb-4 uppercase tracking-wider">
+              <p className="subheading text-primary">
                 {servicesData.subheading}
               </p>
             </ScrollReveal>
@@ -210,7 +204,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:text-right text-left mb-16">
             <ScrollReveal delay={100}>
-              <p className="text-lg text-almost-black mb-4 uppercase tracking-wider">
+              <p className="subheading text-almost-black">
                 {specializationsData.subheading}
               </p>
             </ScrollReveal>

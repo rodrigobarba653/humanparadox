@@ -19,7 +19,7 @@ interface CTAButtonProps {
 }
 
 const baseClasses =
-  "px-8 py-3 rounded-full border-4 transition-colors duration-200 font-medium uppercase text-sm tracking-[1px] text-center flex items-center justify-center gap-2";
+  "button px-8 py-3 rounded-full border-4 transition-colors duration-200 font-medium uppercase text-md tracking-[2px] text-center flex items-center justify-center gap-2";
 
 const variantClasses: Record<CTAButtonVariant, string> = {
   "fill-primary":

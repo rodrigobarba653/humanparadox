@@ -50,7 +50,8 @@ export default function Footer() {
                 <div className="text-black space-y-1">
                   <p>Lunes a jueves: 8:00 am a 9:00 pm</p>
                   <p>Viernes: 8:00 am a 1:00 pm</p>
-                  <p>Sábado y domingo: Cerrado</p>
+                  <p>Sábado: 9:00 am a 1:00 pm</p>
+                  <p>Domingo: Cerrado</p>
                 </div>
               </div>
               <div className="mb-6">
@@ -70,9 +71,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-lg text-primary mb-4 uppercase tracking-wider">
-              CONTACTO
-            </p>
+            <p className="subheading text-primary">CONTACTO</p>
             <h2 className="text-4xl md:text-5xl text-primary font-bold mb-6 tracking-[-1px]">
               ¿Listo para comenzar tu rehabilitación?
             </h2>
@@ -156,7 +155,7 @@ export default function Footer() {
                 <p key={index}>
                   <a
                     href={link.href}
-                    className="hover:text-white transition-colors"
+                    className="footer-sitemap-link hover:text-white transition-colors"
                   >
                     {link.text}
                   </a>
